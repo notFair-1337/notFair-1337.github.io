@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll('.ie-exploder__img');
     const contentWrapper = document.querySelector('.ie-exploder');
+    const ieWrapper = document.querySelector('.ie-exploder__content');
     const finalBox = document.querySelector('.ie-exploder__final');
     const booms = document.querySelectorAll('.ie-exploder__boom');
     const finalBoom = document.querySelector('.ie-exploder__big-boom');
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 finalBoom.classList.add('GOOD-BUY-IE-BOOM-BOOM');
 
                 setTimeout(()=>{
+                    ieWrapper.style.display = 'none';
                     finalImage.classList.add('show')
                 }, 2000);
             }, 1500);

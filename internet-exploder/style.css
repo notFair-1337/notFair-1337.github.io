@@ -128,10 +128,11 @@ img {
 * {
   box-sizing: border-box;
 }
-
+body,html{
+  overflow-x: hidden;
+}
 .ie-exploder {
   min-height: 100vh;
-  min-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,6 +140,8 @@ img {
   overflow: hidden;
   transition: all 0.1s ease-in-out;
 }
+
+
 
 .ie-exploder.explode {
   background: radial-gradient(
@@ -150,11 +153,28 @@ img {
 .ie-exploder__content {
   width: 900px;
   height: 884px;
-  max-width: 100%;
   margin: auto;
   position: relative;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+}
+@media screen and (max-width: 991px) {
+  .ie-exploder__content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(.5);
+  }
+}
+@media screen and (max-width: 768px) {
+  .ie-exploder__content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(.3);
+  }
+}
 .ie-exploder__img {
   position: absolute;
   left: 0;
