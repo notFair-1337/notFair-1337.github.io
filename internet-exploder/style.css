@@ -140,7 +140,22 @@ body,html{
   overflow: hidden;
   transition: all 0.1s ease-in-out;
 }
+.ie-exploder__text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 10px;
+  top: 10px;
 
+  color: brown;
+  font-size: 14px;
+  font-family: sans-serif;
+  z-index: 99999;
+  opacity: .5;
+}
+.ie-exploder__text span{
+  text-decoration: line-through;
+}
 
 
 .ie-exploder.explode {
