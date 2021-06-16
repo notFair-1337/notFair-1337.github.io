@@ -29,7 +29,7 @@
         <div class="d-flex">
             <div class="w-100">
                 <p>Screen width</p>
-                <input type="text" class="form-control w-100 text-center" placeholder="screen in px" id="screen-input">
+                <input type="text" class="form-control w-100 text-center" placeholder="screen in px" id="screen-input" value="640">
             </div>
 
             <div class="w-100 ms-3">
@@ -64,6 +64,10 @@
     screenInput.addEventListener('input', () => {
         if (!valid()) return false
         result.innerText = convert();
+    })
+
+    window.addEventListener('focus', ()=> {
+        convertValue.focus();
     })
 
 </script>
