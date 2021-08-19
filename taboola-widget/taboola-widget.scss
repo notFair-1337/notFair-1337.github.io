@@ -1,0 +1,85 @@
+.taboola-widget + .taboola-widget{
+  margin-top: 30px;
+}
+.taboola-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+
+  &__item {
+    width: 25%;
+    padding: 0 5px;
+    padding-bottom: 10px;
+
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+    @media (max-width: 567px) {
+      width: 100%;
+    }
+  }
+}
+.taboola-item{
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  text-decoration: none;
+
+  &__image {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  &__video {
+    height: 150px;
+  }
+  &__image-inside {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform .2s linear;
+  }
+
+  &__title{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+    transition: color .2s ease;
+  }
+  &__brand {
+    font-size: 10px;
+    font-weight: 100;
+    margin-top: 5px;
+    display: block;
+  }
+
+  &:hover{
+    .taboola-item {
+      &__image{
+
+      }
+      &__image-inside {
+        transform: scale(1.1);
+      }
+      &__title{
+        color: coral;
+      }
+    }
+  }
+}
+
+.taboola-logo {
+  display: block;
+  width: 150px;
+  margin-bottom: 15px;
+  img{
+    max-width: 100%;
+  }
+}

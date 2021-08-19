@@ -1,0 +1,21 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.widget-section {
+  width: 900px;
+  max-width: 100%;
+  margin: 60px auto;
+  padding: 0 15px;
+}
+.widget-section__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
